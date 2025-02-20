@@ -52,3 +52,19 @@ Utils for training
 Load KITTI data
 - **BBP_0.7_GT_0.5.pth**
 Checkpint of fusion model
+
+## Future Works - Data Collection in Real Environments
+Quadrotor UAV platform for data collection. Equipped with:
+- Monocular camera
+- LiDAR
+- T-Motor F90
+- Jetson Xavier NX
+- Q380机架
+![](./imgs/drone.png)
+
+*Elastic-Tracker flexible tracking framework* integrated for stable tracking and SLAM tasks
+![](./imgs/tracking.gif)
+
+RGB and NIR image data collected in low-illumination environment
+![](./imgs/dark.png)
+![](./imgs/NIR.png)
