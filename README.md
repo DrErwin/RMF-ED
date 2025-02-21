@@ -61,12 +61,13 @@ Utils for training
 - **Dataloader.py**
 Load KITTI data
 
-- **BBP_0.7_GT_0.5.pth**
-Checkpint of fusion model
-
 ## Required Data
 You need to download KITTI dataset from https://www.cvlibs.net/datasets/kitti/
 Unzip the dataset and put *velodyne_reduced*, *calib*, *image_2* and *label_2* in the same folder
+
+## Pretrained model
+A pretrained fusion model is available. It is trained under Bounding Box Pair IoU=0.7 and ground truth alignment IoU=0.5 for 200 epoches, which are the standard settings. You can find the model in the root path of this project 
+`./BBP_0.7_GT_0.5.pth`
 
 ## Training
 You can train RMLF by the following code
