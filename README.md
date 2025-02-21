@@ -53,7 +53,22 @@ Load KITTI data
 - **BBP_0.7_GT_0.5.pth**
 Checkpint of fusion model
 
-## Future Works - Data Collection in Real Environments
+## Required Data
+You need to download KITTI dataset including *velodyne_reduced*, *calib*, *image_2* and *label_2*
+
+## Training
+You can train RMLF by the following code
+`python MLP_train.py --kitti_path path_of_kitti --save_path path_to_save_ckp --epoch trainning_epoch`
+To modify the IoU threshold of Bounding Box Pair and ground truth alignment, you can change the parameter below in file *MLP_utils.py*
+```
+THRESHOLD_BBP = 0.7
+THRESHOLD_GT = 0.5
+```
+
+## Generating Results
+You can generate detection results by
+`python MLP_test.py --kittii_path path_of_kitti --ckp_path path_of_MLP_ckp --val_path path_of_val_txt -- result_path path_to_save_results --yolo_path path_of_yolo_ckp`
+<!-- ## Future Works - Data Collection in Real Environments
 Quadrotor UAV platform for data collection. Equipped with:
 - Monocular camera
 - LiDAR
@@ -67,4 +82,4 @@ Quadrotor UAV platform for data collection. Equipped with:
 
 RGB and NIR image data collected in low-illumination environment
 ![](./imgs/dark.png)
-![](./imgs/NIR.png)
+![](./imgs/NIR.png) -->
