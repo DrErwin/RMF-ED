@@ -6,7 +6,7 @@ Detection in Low-Light Environments.*
 ## Brief introduction
 
 ![](./imgs/fig1.png)
-In this study, we introduce RMLF-ED (Real-Time Multimodal Late Fusion for Enhanced Detection), a multi-modality fusion framework designed to overcome the limitations of low-light target detection. By leveraging the complementary capabilities of near-infrared (NIR) cameras and LiDAR sensors, RMLF-ED enhances detection performance.
+In this study, we introduce RMF-ED (Real-Time Multimodal Late Fusion for Enhanced Detection), a multi-modality fusion framework designed to overcome the limitations of low-light target detection. By leveraging the complementary capabilities of near-infrared (NIR) cameras and LiDAR sensors, RMF-ED enhances detection performance.
 
 An NIR-GAN model was developed to address the lack of annotated NIR datasets, integrating Structural Similarity Index (SSIM) loss and L1 loss functions. This approach enables the generation of high-quality NIR images from RGB datasets, bridging a critical gap in training data.
 ![](./imgs/fig6.png)
@@ -57,7 +57,7 @@ Checkpint of fusion model
 You need to download KITTI dataset including *velodyne_reduced*, *calib*, *image_2* and *label_2*
 
 ## Training
-You can train RMLF by the following code
+You can train RMF by the following code
 `python MLP_train.py --kitti_path path_of_kitti --save_path path_to_save_ckp --epoch trainning_epoch`
 To modify the IoU threshold of Bounding Box Pair and ground truth alignment, you can change the parameter below in file *MLP_utils.py*
 ```
